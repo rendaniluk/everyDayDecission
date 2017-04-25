@@ -12,6 +12,6 @@ var myCalculator = function() {
   var numberOfyearsValue = numberOfyears.value;
   var interestTimesValue = interestTimes.value;
   A = initialDepositValue * Math.pow(1 + (annualInterestValue/interestTimesValue), (numberOfyearsValue*interestTimesValue));
-  outPut.innerHTML = 'R' + " " + A.toFixed(2);
+  outPut.innerHTML = accounting.formatMoney(A,"R", 2, " ", ".");
 };
 calculate.addEventListener('click', myCalculator);
